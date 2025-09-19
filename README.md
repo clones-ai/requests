@@ -30,13 +30,6 @@ for all Clones projects:
 
 ---
 
-## Security
-
-If you discover a security vulnerability, **do not** open a public issue.  
-Please follow our [Security Policy](./SECURITY.md).
-
----
-
 ## Contributing
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for triage rules and contribution guidelines.  
