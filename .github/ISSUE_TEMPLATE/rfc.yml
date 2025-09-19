@@ -1,0 +1,43 @@
+name: "📄 RFC (Design Proposal)"
+description: Propose a substantial change needing design review
+title: "[rfc] <short title>"
+labels: ["type:rfc", "status:needs-triage"]
+body:
+  - type: dropdown
+    id: app
+    attributes:
+      label: Application
+      options:
+        - app:desktop
+        - app:cqa
+        - app:web
+        - app:backend
+        - app:infra
+        - app:smart-contract
+        - app:docs
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+  - type: textarea
+    id: design
+    attributes:
+      label: Detailed design
+  - type: textarea
+    id: drawbacks
+    attributes:
+      label: Drawbacks & risks
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives
+  - type: textarea
+    id: adoption
+    attributes:
+      label: Adoption & rollout plan

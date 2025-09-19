@@ -1,0 +1,49 @@
+name: "🐞 Bug report"
+description: Report a reproducible problem
+title: "[bug] <short summary>"
+labels: ["type:bug", "status:needs-triage"]
+body:
+  - type: dropdown
+    id: app
+    attributes:
+      label: Application
+      options:
+        - app:desktop
+        - app:cqa
+        - app:web
+        - app:backend
+        - app:infra
+        - app:smart-contract
+        - app:docs
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Affected version(s)
+      placeholder: e.g., desktop v1.0.2 or commit SHA
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: What did you expect vs. what happened?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal reproduction
+      description: Steps or repo link
+      placeholder: 1) … 2) … 3) …
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Screenshots
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched existing issues and Discussions.
+          required: true

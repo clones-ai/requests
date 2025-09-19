@@ -1,0 +1,35 @@
+name: "✨ Feature request"
+description: Suggest an enhancement
+title: "[feat] <short summary>"
+labels: ["type:feature", "status:needs-triage"]
+body:
+  - type: dropdown
+    id: app
+    attributes:
+      label: Application
+      options:
+        - app:desktop
+        - app:cqa
+        - app:web
+        - app:backend
+        - app:infra
+        - app:smart-contract
+        - app:docs
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: input
+    id: metrics
+    attributes:
+      label: Success metrics

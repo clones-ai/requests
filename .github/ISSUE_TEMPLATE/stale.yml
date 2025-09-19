@@ -1,0 +1,17 @@
+name: Close stale issues
+on:
+  schedule:
+    - cron: "0 3 * * *"
+permissions:
+  issues: write
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          days-before-stale: 45
+          days-before-close: 14
+          stale-issue-label: "status:on-hold"
+          stale-issue-message: "This issue has been inactive for 45 days."
+          close-issue-message: "Closing due to inactivity. Feel free to reopen with new info."
